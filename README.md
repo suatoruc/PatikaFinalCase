@@ -55,7 +55,7 @@ iki farklı satıcıdan daha alınması step yapılırken sayfalar arası geçi�
 rastgele secilen ürünün detay sayfasında alternatif iki satıcı bulana kadar otomasyon şartı sağlayan ürünü bulana kadar <br>
 sayfalar arasında driver'ı taşıyıp kontrol edip şart sağlanana kadar geçişleri otomatik olarak yapıyor.
 
-  [Test Ornegi] (https://recordit.co/GGWaKVOsX4 "İstenilen Şart Sağlanan Kadar Secilen Urun Sayfaları Arasında Geçişler" )
+  ![Test Ornegi] (https://recordit.co/GGWaKVOsX4 "İstenilen Şart Sağlanan Kadar Secilen Urun Sayfaları Arasında Geçişler" )
 
 Testlerimiz çalışırken konsolda log kayıtlarıda görülmektedir. bu log kayıtlarını aynı zamanda test dosyalarımızın <br>
 oldugu yerde de oluşturduğumuz ***Log*** dosyasına da kayıt ettik.
