@@ -214,9 +214,9 @@ return secilenUrunSirasi;
         str = str.toUpperCase().trim();
         String arr[] = str.split("");
         List<String>liste=new ArrayList<>(Arrays.asList(arr));
-        System.out.println(liste.toString());
+      //  System.out.println(liste.toString());
         for (int i = 0; i < liste.size()-1 ; i++) {
-            System.out.println(liste.get(i));
+          //  System.out.println(liste.get(i));
             liste.get(i).replaceAll("İ","I").
                     replaceAll("Ş", "S").
                     replaceAll("Ç","C").
@@ -224,9 +224,9 @@ return secilenUrunSirasi;
                     replaceAll("Ü","U");
 
             if((liste.get(i)+liste.get(i+1)).equals("İ ̇")){
-              System.out.println(liste.toString());
+           //   System.out.println(liste.toString());
              liste.remove(i);
-              System.out.println(">"+liste.toString());
+           //   System.out.println(">"+liste.toString());
         }
           //  if(liste.get(i).equalsIgnoreCase(" ̇")){liste.remove(i);}
             //System.out.println(">>"+liste.toString());
