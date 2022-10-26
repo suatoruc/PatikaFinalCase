@@ -50,6 +50,8 @@ Otomasyonda bu aşamaya gelindeğinde kullandığımız driver üzerinde modifik
 Bu adımda alternatif olarak facebook ile login olma da kod bloğuna entegre edildi.
 ![Facebook ile Alternatif Login İşlemi](/pngs/facebook.jpg "Facebook ile Alternatif Login İşlemi")
 
+### Test Senaryolarında Yapılan Modifikasyonlar
+
 Her iki test senaryomuzda arama sonrası gelen ekranda rastgele bir ürün secilip secilen ürünün detay sayfasından
 iki farklı satıcıdan daha alınması step yapılırken sayfalar arası geçişler otomatik olarak yapmak için dinamik metotlar yazıldı<br>
 rastgele secilen ürünün detay sayfasında alternatif iki satıcı bulana kadar otomasyon şartı sağlayan ürünü bulana kadar <br>
@@ -68,6 +70,7 @@ klasörünün path'i ni alıp konsolda aşağıdaki gibi yazıp çalıştırmam�
 ![Report](/pngs/openReport.jpg "Raporu Konsolda Komut Yazarak Açıyoruz.")
 
 
+### Rapor ile İlgili Görseller
 Komut Default Browserımızda **allure-result** Klasörü İçersine Kayıt Edilen json Uzantılı Dosyaları Bir Araya Getirerek 
 Rapor Formantında Bize Gösteriyor.
 ![Rapor Acilis](/pngs/raporOn.jpg "Raporumuzun Acilis Ekrani")
@@ -80,9 +83,6 @@ Rapor İceriğine Baktığımızda Testlerimizle ilgili Bir Çok Ayrıntı Göre
 Ayrıca Testler Sırasında Gidilen Stepleride Buradan Ayrıntılı Bir Şekilde Görebiliriz.
 ![Test Stepleri](/pngs/TestStepleri.jpg "Test Stepleri")
 
-
-Bu Testler Çalıştırılırken Her Aşamada Doğrulamalar **Assertion** Kullanılarak Yapılmış,
-Oluşturulan Metotlar Parametreli Kullanılarak Daha Dinamik Çalışılması Sağlanmıştır.
 
 ### Tesler Hazırlanırken
 

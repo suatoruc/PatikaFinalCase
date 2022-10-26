@@ -126,7 +126,7 @@ public class Weblocates {
     private int random_urun_sec(int size) {
         Random random=new Random();
         int secilenUrunSirasi=random.nextInt(size);
-        if(secilenUrunSirasi==0){random_urun_sec(size);}
+        if(secilenUrunSirasi==0){secilenUrunSirasi=1;}
 return secilenUrunSirasi;
     }
 
@@ -191,62 +191,41 @@ return secilenUrunSirasi;
     public void sepet_urun_onaylama(){
         String actualThirdSellerName=driver.findElement(By.xpath("(//section[@id=\"onboarding_item_list\"]//span/a)[1]")).getText();;
         actualThirdSellerName=string_manipule_et(actualThirdSellerName);
-       // System.out.println(actualThirdSellerName);
+
         String actualSeconSellerName=driver.findElement(By.xpath("(//section[@id=\"onboarding_item_list\"]//span/a)[2]")).getText();;
         actualSeconSellerName=string_manipule_et(actualSeconSellerName);
-       // System.out.println(actualSeconSellerName);
+
         String actualFirstSellerName=driver.findElement(By.xpath("(//section[@id=\"onboarding_item_list\"]//span/a)[3]")).getText();;
         actualFirstSellerName=string_manipule_et(actualFirstSellerName);
-      //  System.out.println(actualFirstSellerName);
-        String actualProductTitle=driver.findElement(By.xpath("(//div[@class=\"product_name_3Lh3t\"]/a)[1]")).getText().replaceAll("i̇","i");;
+
+        String actualProductTitle=driver.findElement(By.xpath("(//div[@class=\"product_name_3Lh3t\"]/a)[1]")).getText();
         ReusableMethods.waitForVisibility(driver.findElement(By.xpath("(//div[@class=\"product_name_3Lh3t\"]/a)[1]")),5);
+
         Assert.assertEquals(actualFirstSellerName,seller1);
-      Assert.assertEquals(actualProductTitle,productTitle1);
+        Assert.assertEquals(actualProductTitle,productTitle1);
         Assert.assertEquals(actualSeconSellerName,seller2);
         Assert.assertEquals(actualThirdSellerName,seller3);
-       // Assert.assertTrue(actualFirstSellerName.contains(seller1));
-       // Assert.assertTrue(actualSeconSellerName.contains(seller2));
-       // Assert.assertTrue(actualThirdSellerName.contains(seller3));
-
 
     }
     private static String string_manipule_et(String str) {
         str = str.toUpperCase().trim();
         String arr[] = str.split("");
         List<String>liste=new ArrayList<>(Arrays.asList(arr));
-      //  System.out.println(liste.toString());
+       System.out.println(liste.toString());
         for (int i = 0; i < liste.size()-1 ; i++) {
-          //  System.out.println(liste.get(i));
-            liste.get(i).replaceAll("İ","I").
+            System.out.println(liste.get(i));
+            liste.get(i).replaceAll("İ", "I").
                     replaceAll("Ş", "S").
-                    replaceAll("Ç","C").
-                    replaceAll("Ö","O").
-                    replaceAll("Ü","U");
-
-            if((liste.get(i)+liste.get(i+1)).equals("İ ̇")){
-           //   System.out.println(liste.toString());
-             liste.remove(i);
-           //   System.out.println(">"+liste.toString());
+                    replaceAll("Ç", "C").
+                    replaceAll("Ö", "O").
+                    replaceAll("Ü", "U");
+            if(liste.get(i).equals("  ̇")){
+                System.out.println(">>>" + liste.get(i));
+                liste.remove(i);
+            }
         }
-          //  if(liste.get(i).equalsIgnoreCase(" ̇")){liste.remove(i);}
-            //System.out.println(">>"+liste.toString());
-      // for (String a:liste ) {
-      //       if(a.equals("i")) {
-      //           System.out.println(liste.toString());
-      //           liste.remove(liste.indexOf("i")+1);
-      //        //   a.
-      //        //           replaceAll("İ", "I").
-      //        //           replaceAll("Ş", "S").
-      //        //           replaceAll("Ç", "C").
-      //        //           replaceAll("Ö", "O").
-      //        //           replaceAll("Ü", "U").
-      //        //           replaceAll("i ", "i");
-      //           System.out.println(a);
-      //           System.out.println(liste.toString());
-//
-      //       }
-       }
-        String depo = str.substring(0, 1).toUpperCase();
+       System.out.println(liste.toString());
+        String depo = str.substring(0, 1).toLowerCase();
 
         for (int i = 1; i < arr.length; i++) {
             if (liste.get(i).equals(" ")||liste.get(i).equals("-")) {
