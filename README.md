@@ -55,7 +55,7 @@ iki farklı satıcıdan daha alınması step yapılırken sayfalar arası geçi�
 rastgele secilen ürünün detay sayfasında alternatif iki satıcı bulana kadar otomasyon şartı sağlayan ürünü bulana kadar <br>
 sayfalar arasında driver'ı taşıyıp kontrol edip şart sağlanana kadar geçişleri otomatik olarak yapıyor.
 
-![Test Orneği](/pngs/test.gif "İstenilen Şart Sağlanan Kadar Secilen Urun Sayfaları Arasında Geçişler")
+![.](/pngs/test.gif)
 
 ### Log Kayıtları 
 Testlerimiz çalışırken konsolda log kayıtlarıda görülmektedir. bu log kayıtlarını aynı zamanda test dosyalarımızın <br>
@@ -94,7 +94,14 @@ Oluşturulan Metotlar Parametreli Kullanılarak Daha Dinamik Çalışılması Sa
 > - Test Aşamalarında Test Edilen Site Üzerinde Otomasyona İzin Verilmeyen Alanlar Driver'da Motifikasyon Yapılarak Geçilmiştir.
 
 
+<<<<<<< HEAD
 <img src="pngs/java.png" width="100px" height="100px" padding=10px float="left" alt="Java" />
 <img src="pngs/selenium.png" width="100px" height="100px" padding=10px float="left" alt="Selenium" />
 <img src="pngs/testng.png" width="150px" height="100px" padding=10px float="left" alt="TestNG" />
 <img src="pngs/allureReport.png" width="200px" height="100px" padding=10px  vertical-align="left" alt="Allure Reports" />
+=======
+<img src="pngs/java.png" width="100px" height="100px" padding=10px align="left" />
+<img src="pngs/selenium.png" width="100px" height="100px" padding=10px align="left" />
+<img src="pngs/testng.png" width="150px" height="100px" padding=10px align="left" />
+<img src="pngs/allureReport.png" width="200px" height="100px" padding=10px  align="left" />
+>>>>>>> 039af2f42851ab87230582c00690f5fd8cff493b
