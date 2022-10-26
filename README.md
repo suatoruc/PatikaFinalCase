@@ -1,5 +1,5 @@
 
-<img src="pngs/icon.png" float="right" />
+<img src="pngs/icon.png" align="right" />
 
 # A101 **Practicum Final Case**
 ## *Hepsiburada.com* Sitesinde Yapılan Kullanıcı Test Senaryoları
@@ -94,14 +94,9 @@ Oluşturulan Metotlar Parametreli Kullanılarak Daha Dinamik Çalışılması Sa
 > - Test Aşamalarında Test Edilen Site Üzerinde Otomasyona İzin Verilmeyen Alanlar Driver'da Motifikasyon Yapılarak Geçilmiştir.
 
 
-<<<<<<< HEAD
-<img src="pngs/java.png" width="100px" height="100px" padding=10px float="left" alt="Java" />
-<img src="pngs/selenium.png" width="100px" height="100px" padding=10px float="left" alt="Selenium" />
-<img src="pngs/testng.png" width="150px" height="100px" padding=10px float="left" alt="TestNG" />
-<img src="pngs/allureReport.png" width="200px" height="100px" padding=10px  vertical-align="left" alt="Allure Reports" />
-=======
+
 <img src="pngs/java.png" width="100px" height="100px" padding=10px align="left" />
 <img src="pngs/selenium.png" width="100px" height="100px" padding=10px align="left" />
 <img src="pngs/testng.png" width="150px" height="100px" padding=10px align="left" />
 <img src="pngs/allureReport.png" width="200px" height="100px" padding=10px  align="left" />
->>>>>>> 039af2f42851ab87230582c00690f5fd8cff493b
+
