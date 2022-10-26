@@ -74,17 +74,17 @@ klasörünün path'i ni alıp konsolda aşağıdaki gibi yazıp çalıştırmam�
 
 
 ### Rapor ile İlgili Görseller
-Komut Default Browserımızda **allure-result** Klasörü İçersine Kayıt Edilen json Uzantılı Dosyaları Bir Araya Getirerek 
+>- Komut Default Browserımızda **allure-result** Klasörü İçersine Kayıt Edilen json Uzantılı Dosyaları Bir Araya Getirerek 
 Rapor Formantında Bize Gösteriyor.
 ![Rapor Acilis](/pngs/raporOn.jpg "Raporumuzun Acilis Ekrani")
 
-Rapor İceriğine Baktığımızda Testlerimizle ilgili Bir Çok Ayrıntı Görebiliriz.
+>- Rapor İceriğine Baktığımızda Testlerimizle ilgili Bir Çok Ayrıntı Görebiliriz.
 ![Rapor icerigi](/pngs/raporgenel.jpg "Rapor Icerigi")
 ![Rapor icerigi](/pngs/raporgenel1.jpg "Rapor Icerigi")
 
 
 
-Ayrıca Testler Sırasında Gidilen Stepleride Buradan Ayrıntılı Bir Şekilde Görebiliriz.
+>- Ayrıca Testler Sırasında Gidilen Stepleride Buradan Ayrıntılı Bir Şekilde Görebiliriz.
 ![Test Stepleri](/pngs/TestStepleri.jpg "Test Stepleri")
 
 
