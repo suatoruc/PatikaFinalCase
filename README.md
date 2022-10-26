@@ -66,6 +66,8 @@ oldugu yerde de oluşturduğumuz ***Log*** dosyasına da kayıt ettik.
 Raporlama da Allure Report Kullanıldı. Raporlamalara Ulaşmak için Testler Çalıştırıldıkdan Sonra Proje İçinde oluşan **allure-result**
 klasörünün path'i ni alıp konsolda aşağıdaki gibi yazıp çalıştırmamız gereklidir.
 ![Report](/pngs/openReport.jpg "Raporu Konsolda Komut Yazarak Açıyoruz.")
+
+
 Komut Default Browserımızda **allure-result** Klasörü İçersine Kayıt Edilen json Uzantılı Dosyaları Bir Araya Getirerek 
 Rapor Formantında Bize Gösteriyor.
 ![Rapor Acilis](/pngs/raporOn.jpg "Raporumuzun Acilis Ekrani")
@@ -73,6 +75,8 @@ Rapor Formantında Bize Gösteriyor.
 Rapor İceriğine Baktığımızda Testlerimizle ilgili Bir Çok Ayrıntı Görebiliriz.
 ![Rapor icerigi](/pngs/raporgenel.jpg "Rapor Icerigi")
 ![Rapor icerigi](/pngs/raporgenel1.jpg "Rapor Icerigi")
+
+
 Ayrıca Testler Sırasında Gidilen Stepleride Buradan Ayrıntılı Bir Şekilde Görebiliriz.
 ![Test Stepleri](/pngs/TestStepleri.jpg "Test Stepleri")
 
