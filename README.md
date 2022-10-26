@@ -33,7 +33,10 @@ Hepsiburada sitesi üzerinde iki farklı senaryo ile testlerimizi yaptık
 
 
 Testler iki senaryo halinde yapıldı. ilk senaryomuzdaki login olup ürün seçme şeklindeydi.<br>
-test yapılan site [Hepsiburada](https://www.hepsiburada.com/)  özellikle login olma fonksiyonunu otomasyona kapatmış olduğu görüldü <br>
+
+### Test Senaryolarında Yapılan Modifikasyonlar
+
+Test yapılan site [Hepsiburada](https://www.hepsiburada.com/)  özellikle login olma fonksiyonunu otomasyona kapatmış olduğu görüldü <br>
 test çalıştırıldığında login ekranından yapılan post işleminin response olarak 403 hata kodu aldığı görüldü.
 
 ![Login Olma Sırasında Site Otomasyona İzin Vermediginden Alınan Hatanın Status Kodu!](/pngs/403Hatasi.jpg "Login Olma Sırasında Site Otomasyona İzin Vermediginden Alınan Hatanın Status Kodu" )
@@ -50,7 +53,7 @@ Otomasyonda bu aşamaya gelindeğinde kullandığımız driver üzerinde modifik
 Bu adımda alternatif olarak facebook ile login olma da kod bloğuna entegre edildi.
 ![Facebook ile Alternatif Login İşlemi](/pngs/facebook.jpg "Facebook ile Alternatif Login İşlemi")
 
-### Test Senaryolarında Yapılan Modifikasyonlar
+
 
 Her iki test senaryomuzda arama sonrası gelen ekranda rastgele bir ürün secilip secilen ürünün detay sayfasından
 iki farklı satıcıdan daha alınması step yapılırken sayfalar arası geçişler otomatik olarak yapmak için dinamik metotlar yazıldı<br>
@@ -78,6 +81,7 @@ Rapor Formantında Bize Gösteriyor.
 Rapor İceriğine Baktığımızda Testlerimizle ilgili Bir Çok Ayrıntı Görebiliriz.
 ![Rapor icerigi](/pngs/raporgenel.jpg "Rapor Icerigi")
 ![Rapor icerigi](/pngs/raporgenel1.jpg "Rapor Icerigi")
+
 
 
 Ayrıca Testler Sırasında Gidilen Stepleride Buradan Ayrıntılı Bir Şekilde Görebiliriz.
