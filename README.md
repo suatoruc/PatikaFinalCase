@@ -6,30 +6,30 @@
 Hepsiburada sitesi üzerinde iki farklı senaryo ile testlerimizi yaptık
 - ***İlk Senaryo*** <br>
 
-       - hepsiburada_sayfasini_ac();<br>
-       - kullanici_girisi_yap();<br>
-       - kullanici_girisin_onayla();<br>
-       - urun_aramasi_yap("laptop");<br>
-       - arama_islemini_dogrulama("laptop");<br>
-       - sayfadan_rastgeleUrun_sec();<br>
-       - urun_sayfasina_gecis_yap();<br>
-       - diger_satici_sayisini_kontrolEt_urunSec();<br>
-       - sepet_sayfasina_git();<br>
-       - sepet_urun_onaylama();<br>
-       - sepetteki_urunleri_sil();<br>
-       - kullanici_logout_olur();<br>
-       - kullanici_logout_islemini_dogrular();<br>
+       - hepsiburada_sayfasini_ac();
+       - kullanici_girisi_yap();
+       - kullanici_girisin_onayla();
+       - urun_aramasi_yap("laptop");
+       - arama_islemini_dogrulama("laptop");
+       - sayfadan_rastgeleUrun_sec();
+       - urun_sayfasina_gecis_yap();
+       - diger_satici_sayisini_kontrolEt_urunSec();
+       - sepet_sayfasina_git();
+       - sepet_urun_onaylama();
+       - sepetteki_urunleri_sil();
+       - kullanici_logout_olur();
+       - kullanici_logout_islemini_dogrular();
 
 - ***İkinci Senaryo***<br>
 
-       - hepsiburada_sayfasini_ac();<br>
-       - urun_aramasi_yap("laptop");<br>
-       - arama_islemini_dogrulama("laptop");<br>
-       - sayfadan_rastgeleUrun_sec();<br>
-       - urun_sayfasina_gecis_yap();<br>
-       - diger_satici_sayisini_kontrolEt_urunSec();<br>
-       - sepet_sayfasina_git();<br>
-       - sepet_urun_onaylama();<br>
+       - hepsiburada_sayfasini_ac();
+       - urun_aramasi_yap("laptop");
+       - arama_islemini_dogrulama("laptop");
+       - sayfadan_rastgeleUrun_sec();
+       - urun_sayfasina_gecis_yap();
+       - diger_satici_sayisini_kontrolEt_urunSec();
+       - sepet_sayfasina_git();
+       - sepet_urun_onaylama();
 
 
 Testler iki senaryo halinde yapıldı. ilk senaryomuzdaki login olup ürün seçme şeklindeydi.<br>
