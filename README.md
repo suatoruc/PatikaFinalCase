@@ -88,7 +88,7 @@ Rapor Formantında Bize Gösteriyor.
 ![Test Stepleri](/pngs/TestStepleri.jpg "Test Stepleri")
 
 
-### Tesler Hazırlanırken
+### Testler Hazırlanırken
 
 > - Proje **Java** Programlama Dilinde Yazılmıştır.
 > - Yazılan Senaryolar da Web de **Selenium** ve **TestNG** Framework'ü Kullanılmıştır.

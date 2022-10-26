@@ -29,36 +29,33 @@ private static String getTestMethodName(ITestResult iTestResult){
     @Override
     public void onStart(ITestContext iTestContext) {
     Log.startTestCase(iTestContext.getName());
-       // System.out.println(iTestContext.getName()+" Test Baslatildi.");
+
         iTestContext.setAttribute("Webdriver", Driver.getDriver());
     }
     @Override
     public void onFinish(ITestContext iTestContext) {
     Log.endTestCase(iTestContext.getName());
-       // System.out.println(iTestContext.getName()+" Test Sonlandirildi.");
+
     }
     @Override
     public void onTestStart(ITestResult iTestResult) {
     Log.info("Test içindeki" + getTestMethodName(iTestResult)+" Testi Baslatildi.");
-       // System.out.println("Test içindeki " + getTestMethodName(iTestResult)+" Testi Baslatildi.");
+
     }
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
     Log.info("Test içindeki " + getTestMethodName(iTestResult)+" Testin Çalışmasi Başarili Bir Şekilde Sonladirildi" );
-       // System.out.println("Test içindeki " + getTestMethodName(iTestResult)+" Testin Çalışmasi Başarili Bir Şekilde Sonladirildi" );
-    }
+         }
     @Override
     public void onTestFailure(ITestResult iTestResult) {
     Log.info(getTestMethodName(iTestResult) + " test is failed.");
-        //System.out.println(getTestMethodName(iTestResult) + " test is failed.");
-        //Get driver from BaseTest and assign to local webdriver variable.
-        Object testClass = iTestResult.getInstance();
+          Object testClass = iTestResult.getInstance();
         WebDriver driver = Driver.getDriver();
 
         if (driver instanceof WebDriver) {
-            //Take base64Screenshot screenshot for extent reports
+
             Log.info(getTestMethodName(iTestResult) + " Testi için ScrrenShot Alindi ");
-           // System.out.println(getTestMethodName(iTestResult) + " Testi için ScrrenShot Alindi ");
+
             saveFailureScreenShot(driver);
         }
         saveTextLog(getTestMethodName(iTestResult)+ " test fail oldu ve Screen Shot Alindi");
@@ -67,14 +64,13 @@ private static String getTestMethodName(ITestResult iTestResult){
     @Override
     public void onTestSkipped(ITestResult iTestResult){
     Log.info("getTestMethodName(iTestResult) + \"Bu Test Çalıştırılmadan Atlanıldı\"");
-       // System.out.println(getTestMethodName(iTestResult) + "Bu Test Çalıştırılmadan Atlanıldı");
+
        }
 
        @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult){
     Log.info(getTestMethodName(iTestResult) + "test başarısız Oldu Ancak Tanımlanmış Başarı Oranında");
-          // System.out.println(getTestMethodName(iTestResult) + "test başarısız Oldu Ancak Tanımlanmış Başarı Oranında");
-       }
+             }
 
 
 
