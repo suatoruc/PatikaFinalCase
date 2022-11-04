@@ -48,7 +48,8 @@ public class Weblocates {
 
     By productPage_otherSeller_addToCard_button=By.xpath("(//div[@class='marketplace-list']//tr//span[text()='Sepete Ekle'])");
     By productPage_addToCart_button=By.id("addToCart");
-    By productPage_afterAddCart_closePopUp_button=By.cssSelector("a[class='checkoutui-Modal-2iZXl']");
+    //By productPage_afterAddCart_closePopUp_button=By.cssSelector("a[class='checkoutui-Modal-2iZXl']");
+    By productPage_afterAddCart_closePopUp_button=By.xpath("//div/h1/a");
     By header_cartPage_button=By.id("shoppingCart");
     By header_logout_button=By.xpath("//a[contains(text(),'Çıkış Yap')]");
     By cartPage_delete_product_button=By.cssSelector("[class='product_delete_1zR-0']");
@@ -150,7 +151,7 @@ return secilenUrunSirasi;
             seller1 = driver.findElement(productPage_header_sellerName_text).getText().toLowerCase();
             seller1 = string_manipule_et(seller1);
             driver.findElement(productPage_addToCart_button).click();
-            ReusableMethods.waitForClickablility(productPage_afterAddCart_closePopUp_button, 10);
+            ReusableMethods.fluentWait(driver.findElement(productPage_afterAddCart_closePopUp_button),5);
             driver.findElement(productPage_afterAddCart_closePopUp_button).click();
 
             diger_satici_secimi_yap(1);
@@ -172,7 +173,7 @@ return secilenUrunSirasi;
             seller3=string_manipule_et(seller3);
             }
         driver.findElement(By.xpath(path)).click();
-        ReusableMethods.waitForClickablility(productPage_afterAddCart_closePopUp_button,15);
+        ReusableMethods.fluentWait(driver.findElement(productPage_afterAddCart_closePopUp_button),5);
         driver.findElement(productPage_afterAddCart_closePopUp_button).click();
     }
     @Step("Sepet Sayfasina Gidilir")
@@ -189,47 +190,54 @@ return secilenUrunSirasi;
     }
     @Step("Sepetteki Urunler Satici Adi ve Urun Title ile Dogrulanir")
     public void sepet_urun_onaylama(){
-        String actualThirdSellerName=driver.findElement(By.xpath("(//section[@id=\"onboarding_item_list\"]//span/a)[1]")).getText();;
+        String actualThirdSellerName=driver.findElement(By.xpath("(//section[@id=\"onboarding_item_list\"]//span/a)[1]")).getText().toLowerCase(Locale.ENGLISH);
         actualThirdSellerName=string_manipule_et(actualThirdSellerName);
 
-        String actualSeconSellerName=driver.findElement(By.xpath("(//section[@id=\"onboarding_item_list\"]//span/a)[2]")).getText();;
+        String actualSeconSellerName=driver.findElement(By.xpath("(//section[@id=\"onboarding_item_list\"]//span/a)[2]")).getText().toLowerCase(Locale.ENGLISH);;
         actualSeconSellerName=string_manipule_et(actualSeconSellerName);
 
-        String actualFirstSellerName=driver.findElement(By.xpath("(//section[@id=\"onboarding_item_list\"]//span/a)[3]")).getText();;
+        String actualFirstSellerName=driver.findElement(By.xpath("(//section[@id=\"onboarding_item_list\"]//span/a)[3]")).getText().toLowerCase(Locale.ENGLISH);
         actualFirstSellerName=string_manipule_et(actualFirstSellerName);
 
-        String actualProductTitle=driver.findElement(By.xpath("(//div[@class=\"product_name_3Lh3t\"]/a)[1]")).getText();
+        String actualProductTitle1=driver.findElement(By.xpath("(//div[@class=\"product_name_3Lh3t\"]/a)[1]")).getText();
+        String actualProductTitle2=driver.findElement(By.xpath("(//div[@class=\"product_name_3Lh3t\"]/a)[2]")).getText();
+        String actualProductTitle3=driver.findElement(By.xpath("(//div[@class=\"product_name_3Lh3t\"]/a)[3]")).getText();
         ReusableMethods.waitForVisibility(driver.findElement(By.xpath("(//div[@class=\"product_name_3Lh3t\"]/a)[1]")),5);
 
+
         Assert.assertEquals(actualFirstSellerName,seller1);
-        Assert.assertEquals(actualProductTitle,productTitle1);
         Assert.assertEquals(actualSeconSellerName,seller2);
         Assert.assertEquals(actualThirdSellerName,seller3);
+
+        Assert.assertEquals(actualProductTitle1,productTitle1);
+        Assert.assertEquals(actualProductTitle2,productTitle1);
+        Assert.assertEquals(actualProductTitle3,productTitle1);
 
     }
     private static String string_manipule_et(String str) {
         str = str.toUpperCase().trim();
         String arr[] = str.split("");
         List<String>liste=new ArrayList<>(Arrays.asList(arr));
-       System.out.println(liste.toString());
+       //System.out.println(liste.toString());
         for (int i = 0; i < liste.size()-1 ; i++) {
-            System.out.println(liste.get(i));
+           //System.out.println(liste.get(i));
             liste.get(i).replaceAll("İ", "I").
                     replaceAll("Ş", "S").
                     replaceAll("Ç", "C").
                     replaceAll("Ö", "O").
                     replaceAll("Ü", "U");
-            if(liste.get(i).equals("  ̇")){
-                System.out.println(">>>" + liste.get(i));
+            if(liste.get(i).equals("i̇")||liste.get(i).equals("İ̇")){
+               // System.out.println(">>>" + liste.get(i));
                 liste.remove(i);
+                liste.get(i).replaceAll("İ̇|i̇","");
             }
         }
-       System.out.println(liste.toString());
+      // System.out.println(liste.toString());
         String depo = str.substring(0, 1).toLowerCase();
 
         for (int i = 1; i < arr.length; i++) {
             if (liste.get(i).equals(" ")||liste.get(i).equals("-")) {
-                depo += str.substring(i, i + 2).toUpperCase();
+                depo += str.substring(i, i + 2);
                 i++;
             } else {
                 depo += str.substring(i, i + 1);

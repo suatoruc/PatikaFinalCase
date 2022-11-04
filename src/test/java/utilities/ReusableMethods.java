@@ -22,7 +22,7 @@ public class ReusableMethods {
 
 
 
-    //========Switching Window=====//
+
     public static void switchToWindow(String targetTitle) {
         String origin = Driver.getDriver().getWindowHandle();
         for (String handle : Driver.getDriver().getWindowHandles()) {
@@ -31,18 +31,7 @@ public class ReusableMethods {
                 return;
             }
         }
-     //   Driver.getDriver().switchTo().window(origin);
-    }
-    public static void waitAndClick(WebElement element) throws InterruptedException {
-        for (int i = 0; i < timeout; i++) {
-            try {
-                element.click();
-                return;
-            } catch (WebDriverException e) {
-             Thread.sleep(5000);
-            }
-        }
-    }
+       }
 
     public static void hover(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());
@@ -58,7 +47,7 @@ public class ReusableMethods {
         }
     }
 
-    //===============Explicit Wait==============//
+
     public static WebElement waitForVisibility(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.visibilityOf(element));
@@ -91,28 +80,11 @@ public class ReusableMethods {
         }
     }
 
-    public static void waitForPageToLoad(long timeout) {
-        ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
-            public Boolean apply(WebDriver driver) {
-                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
-            }
-        };
-        try {
-            System.out.println("Waiting for page to load...");
-            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
-            wait.until(expectation);
-        } catch (Throwable error) {
-            System.out.println(
-                    "Timeout waiting for Page Load Request to complete after " + timeout + " seconds");
-        }
-    }
 
-    //======Fluent Wait====//
-    public static WebElement fluentWait(final WebElement webElement, int timeout) {
-        //FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver()).withTimeout(timeinsec, TimeUnit.SECONDS).pollingEvery(timeinsec, TimeUnit.SECONDS);
-        FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
-                .withTimeout(Duration.ofSeconds(3))//Wait 3 second each time
-                .pollingEvery(Duration.ofSeconds(1));//Check for the element every 1 second
+    public static WebElement fluentWait(final WebElement webElement,int period) {
+           FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver())
+                .withTimeout(Duration.ofSeconds(30))//Wait 3 second each time
+                .pollingEvery(Duration.ofSeconds(period));//Check for the element every 1 second
 
         WebElement element = wait.until(new Function<WebDriver, WebElement>() {
             public WebElement apply(WebDriver driver) {

@@ -42,6 +42,7 @@ public void testSenario02(Method method){
     diger_satici_sayisini_kontrolEt_urunSec();
     sepet_sayfasina_git();
     sepet_urun_onaylama();
+    sepetteki_urunleri_sil();
 
 }
 }
